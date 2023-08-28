@@ -1,0 +1,27 @@
+# Initialize counters
+sentence_length = 0
+word_count = 0
+vowel_count = 0
+
+# Input sentence from the user
+sentence = input("Enter a sentence ending with a period (.): ")
+
+# Loop through each character in the sentence
+for char in sentence:
+    # Increment the sentence length counter
+    sentence_length += 1
+    
+    # Check if the character is a space (indicating a word separator)
+    if char == ' ':
+        word_count += 1
+    # Check if the character is a vowel (case-insensitive)
+    elif char.lower() in 'aeiou':
+        vowel_count += 1
+
+# Add 1 to the word_count to account for the last word
+word_count += 1
+
+# Display the results
+print("Sentence Length:", sentence_length)
+print("Number of Words:", word_count)
+print("Number of Vowels:", vowel_count)
